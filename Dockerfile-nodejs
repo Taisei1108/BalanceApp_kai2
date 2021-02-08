@@ -1,0 +1,5 @@
+FROM node:10.14.2-alpine
+MAINTAINER takahashi
+
+RUN npm install -g create-react-app
+RUN npm install axios
