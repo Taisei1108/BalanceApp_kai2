@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'BalanceApp', #追加
+    'rest_framework',#追加
+    'corsheaders',#追加
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +42,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+REST_FRAMEWORK = { #これも追加
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
+#追加
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000/'
+)
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',# 追加
+    'django.middleware.common.CommonMiddleware',# 追加
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
