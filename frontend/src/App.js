@@ -28,6 +28,7 @@ export default App;
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import './App.css';
 
 class App extends Component {
     state = {
@@ -48,22 +49,22 @@ class App extends Component {
                 console.log(err);
             });
     }
-
     render() {
         return (
-            <div>
-                <p>借金表</p>
+          <div className='body'>
+            <p>BalanceList</p>
+            <div className='container'>
                 {this.state.Balancelist.map(item => (
-                     <div key={item.id}>
+                     <div key={item.id} className='box'>
                         <p>{item.name}</p>
                         <p>{item.event_date}</p>
-                        <p>{item.price}</p>
-                        <p>{item.event_date}</p>
+                        <p>{item.price}yen</p>
+                        <p>{item.is_paid === 1?'支払い済み':'未払い'}</p>
                      </div>
                 ))}
             </div>
+          </div>
         );
     }
 }
-
 export default App;
