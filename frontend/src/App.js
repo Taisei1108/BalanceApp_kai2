@@ -58,6 +58,7 @@ class App extends Component {
                      <div key={item.id} className='box'>
                         <p>{item.name}</p>
                         <p>{item.event_date}</p>
+                        <p>{item.event_name.name}</p>
                         <p>{item.price}yen</p>
                         <p>{item.is_paid === 1?'支払い済み':'未払い'}</p>
                      </div>
