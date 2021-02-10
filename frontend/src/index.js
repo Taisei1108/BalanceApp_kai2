@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import LoginControl from './button'
+import Form from './form';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Form />
+    <LoginControl />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

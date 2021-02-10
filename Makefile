@@ -3,6 +3,9 @@
 app:
 	docker-compose run --rm app sh -c "python manage.py startapp ${app}"
 
+shell:
+	docker-compose run --rm app sh -c "python manage.py shell"
+
 test:
 	docker-compose run --rm app sh -c "pytest -l -v -s ${app} && flake8"
 
