@@ -60,7 +60,7 @@ class App extends Component {
                         <p>{item.event_date}</p>
                         <p>{item.event_name.name}</p>
                         <p>{item.price}yen</p>
-                        <p>{item.is_paid === 1?'支払い済み':'未払い'}</p>
+                        <p>{item.is_paid === true?'支払い済み':'未払い'}</p>
                      </div>
                 ))}
             </div>
